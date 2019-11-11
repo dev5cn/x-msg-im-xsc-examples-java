@@ -50,8 +50,9 @@ public class Main
 	public static final void main(String[] args) throws Exception
 	{
 		Main.mainTcp(args);
-		// Main.mainHttp(args);
-		// Main.mainWebSocket(args);
+		Main.mainHttp(args);
+		Main.mainWebSocket(args);
+		Misc.hold();
 	}
 
 	public static void mainTcp(String[] args) throws Exception
@@ -143,6 +144,5 @@ public class Main
 			}
 		});
 		wsCompletableFuture.join();
-		Misc.hold();
 	}
 }
